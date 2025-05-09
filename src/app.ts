@@ -9,15 +9,14 @@ import globalErrorHandler from './app/middlewares/globalErrorhandler';
 
 const app: Application = express();
 
-// parser
 app.use(express.json());
 
-// CORS setup
 app.use(
   cors({
     origin: [
-      'http://localhost:5173',
       'https://bicycle-sphere-new.vercel.app',
+      'https://bicycle-sphere.vercel.app',
+      'http://localhost:5173',
       'http://localhost:5174',
     ],
     credentials: true,
